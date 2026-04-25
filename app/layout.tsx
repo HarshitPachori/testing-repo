@@ -1,18 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { LenisProvider } from '@/components/lenis-provider';
 import './globals.css';
-
-const geistSans = Geist({
-  subsets: ['latin'],
-  variable: '--font-sans'
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono'
-});
 
 export const metadata: Metadata = {
   title: 'Harshit Pachori | Lead Full-Stack Architect',
@@ -26,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LenisProvider />
           {children}

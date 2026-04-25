@@ -16,7 +16,7 @@ function SkillMarquee({ items, direction = 'left' }: { items: Skill[]; direction
         className="flex min-w-max gap-4"
       >
         {[...items, ...items].map((skill, index) => {
-          const Icon = Icons[skill.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+          const Icon = Icons[skill.icon as keyof typeof Icons] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
           return (
             <GlassCard

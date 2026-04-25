@@ -7,4 +7,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .env*
+.dev.vars
 .DS_Store
+/.wrangler
